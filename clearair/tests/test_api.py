@@ -70,14 +70,18 @@ class TestCitiesEndpoint:
         assert "chicago" in keys
 
     def test_add_city_validates_fields(self, client):
-        resp = client.post("/api/v1/cities/add",
-                           params={"key": "test_city"},
-                           json={
-                               "display_name": "Test City",
-                               "lat": 10.0, "lon": 20.0,
-                               "timezone": "UTC",
-                               "population": 500000,
-                               "country_code": "XX",
-                           })
+        from unittest.mock import patch
+        import uuid
+        unique_key = f"test_city_{uuid.uuid4().hex[:8]}"
+        with patch("config.loader.add_city"):
+            resp = client.post("/api/v1/cities/add",
+                               params={"key": unique_key},
+                               json={
+                                   "display_name": "Test City",
+                                   "lat": 10.0, "lon": 20.0,
+                                   "timezone": "UTC",
+                                   "population": 500000,
+                                   "country_code": "XX",
+                               })
         assert resp.status_code == 200
         assert "added" in resp.json()["message"].lower()

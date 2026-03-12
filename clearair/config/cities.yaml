@@ -1,0 +1,56 @@
+mumbai:
+  display_name: "Mumbai, India"
+  lat: 19.0760
+  lon: 72.8777
+  timezone: "Asia/Kolkata"
+  population: 20667656
+  openaq_location_ids: [8118, 8119, 8120]
+  has_epa_data: false
+  traffic_source: "tomtom"
+  country_code: "IN"
+
+chicago:
+  display_name: "Chicago, USA"
+  lat: 41.8781
+  lon: -87.6298
+  timezone: "America/Chicago"
+  population: 2696555
+  has_epa_data: true
+  epa_state_code: "17"
+  epa_county_code: "031"
+  traffic_source: "tomtom"
+  country_code: "US"
+
+beijing:
+  display_name: "Beijing, China"
+  lat: 39.9042
+  lon: 116.4074
+  timezone: "Asia/Shanghai"
+  population: 21542000
+  openaq_location_ids: [7201, 7202, 7203]
+  has_epa_data: false
+  traffic_source: "tomtom"
+  country_code: "CN"
+
+london:
+  display_name: "London, UK"
+  lat: 51.5074
+  lon: -0.1278
+  timezone: "Europe/London"
+  population: 8982000
+  openaq_location_ids: [65, 66, 67]
+  has_epa_data: false
+  traffic_source: "tomtom"
+  country_code: "GB"
+
+new_york:
+  display_name: "New York, USA"
+  lat: 40.7128
+  lon: -74.0060
+  timezone: "America/New_York"
+  population: 8336817
+  has_epa_data: true
+  epa_state_code: "36"
+  epa_county_code: "061"
+  traffic_source: "tomtom"
+  country_code: "US"

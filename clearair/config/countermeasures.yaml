@@ -1,0 +1,94 @@
+construction_dust_control:
+  display_name: "Construction Dust Control"
+  description: "Water spraying, dust barriers, and site management on active construction"
+  affects_features:
+    PM2.5: -0.30
+    PM10: -0.35
+    visibility: +0.15
+  cost_tier: low
+  cost_tier_weight: 1.0
+  typical_lag_days: 7
+  suitable_seasons: ["all"]
+  suitable_city_types: ["developing", "urban"]
+
+promote_public_transport:
+  display_name: "Promote Public Transport"
+  description: "Subsidies, frequency increases, and campaigns to shift commuters to transit"
+  affects_features:
+    traffic_peak_hours: -0.20
+    traffic_concentration: -0.15
+    NO2: -0.10
+    CO: -0.08
+  cost_tier: medium
+  cost_tier_weight: 2.0
+  typical_lag_days: 30
+  suitable_seasons: ["all"]
+  suitable_city_types: ["all"]
+
+industrial_emission_control:
+  display_name: "Industrial Emission Control"
+  description: "Mandatory scrubbers, emission caps, and factory shutdowns during high-AQI events"
+  affects_features:
+    SO2: -0.40
+    NO2: -0.25
+    PM2.5: -0.20
+    toxics: -0.30
+  cost_tier: high
+  cost_tier_weight: 4.0
+  typical_lag_days: 14
+  suitable_seasons: ["all"]
+  suitable_city_types: ["industrial", "urban"]
+
+green_initiatives:
+  display_name: "Urban Green Initiatives"
+  description: "Tree planting, urban forests, and green rooftop programs"
+  affects_features:
+    PM2.5: -0.05
+    PM10: -0.07
+    temperature: -0.02
+  cost_tier: medium
+  cost_tier_weight: 2.5
+  typical_lag_days: 180
+  suitable_seasons: ["spring", "summer"]
+  suitable_city_types: ["all"]
+
+electric_vehicles:
+  display_name: "Electric Vehicle Transition"
+  description: "EV subsidies, charging infrastructure, and ICE vehicle restrictions"
+  affects_features:
+    NO2: -0.20
+    CO: -0.30
+    PM2.5: -0.10
+    traffic_concentration: -0.05
+  cost_tier: high
+  cost_tier_weight: 5.0
+  typical_lag_days: 365
+  suitable_seasons: ["all"]
+  suitable_city_types: ["urban", "suburban"]
+
+traffic_management:
+  display_name: "Traffic Management"
+  description: "Smart signals, congestion pricing, odd-even schemes, and route optimization"
+  affects_features:
+    traffic_peak_hours: -0.30
+    traffic_concentration: -0.25
+    NO2: -0.15
+    CO: -0.12
+  cost_tier: low
+  cost_tier_weight: 1.5
+  typical_lag_days: 3
+  suitable_seasons: ["all"]
+  suitable_city_types: ["urban"]
+
+crop_burning_ban:
+  display_name: "Agricultural Burning Ban"
+  description: "Enforcement of no-burn policies during harvest seasons with farmer compensation"
+  affects_features:
+    PM2.5: -0.45
+    PM10: -0.40
+    CO: -0.20
+  cost_tier: medium
+  cost_tier_weight: 2.0
+  typical_lag_days: 1
+  suitable_seasons: ["autumn", "winter"]
+  suitable_city_types: ["all"]
